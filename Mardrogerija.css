@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 10%; /* Changed from 60px to 10% */
+    background-color: blanchedalmond;
+}
+
+header {
+    background: repeating-linear-gradient(
+        0deg,
+        #000, /* Black */
+        #000 2.5%, /* Stripe thickness */
+        #fff 1.6%, /* White */
+        #fff 5% /* Stripe thickness */
+    );
+    color: #fff; /* White text color for visibility */
+    padding: 2% 0; /* Changed padding to percentage */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    padding-left:5%; /* Adjusted padding */
+}
+
+.corner-img {
+    position: fixed;
+    width: 5%; /* Adjusted width */
+    height: 5%; /* Adjusted height */
+    top: 2%;
+}
+
+.corner-img.left {
+    left: 5%; /* Adjusted left position */
+}
+
+nav .menu {
+    list-style-type: none;
+    margin: 0.1%; /* Changed margin */
+    padding: 1.5%; /* Changed padding */
+    text-align: left;
+    background: #F8C8DC; /* Pink background for the nav menu */
+    text-shadow: 4px 4px 8px rgba(0 ,0,0,0.8); 
+}
+
+nav .menu li {
+    display: inline;
+    margin: 0 7%; /* Adjusted margin */
+}
+
+nav .menu a {
+    color: #fff; /* White text color for visibility on pink background */
+    text-decoration: none;
+    font-size: 1.5rem; /* Adjusted font-size to rem */
+}
+
+nav .menu a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 10vw; /* Responsive font size */
+    margin-top: 2%;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 4%;
+    display: inline-block;
+    padding-left: 5%; /* Adjusted padding */
+    color: #FFFFFF; /* White color for the text */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Text shadow for better visibility */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 5%; /* Adjusted margin-top */
+    height: 75vh; /* Adjusted height to viewport height */
+}
+
+/* Hide images by default */
+.slideshow-container img {
+    width: 100%;
+    height: 100%; /* Full height in percentage */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Keyframes for slideshow animation */
+@keyframes slide {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Set up each image to display with the animation */
+.slideshow-container img:nth-child(1) {
+    animation: slide 15s infinite;
+}
+
+.slideshow-container img:nth-child(2) {
+    animation: slide 15s infinite 5s; /* Starts after 5 seconds */
+}
+
+.slideshow-container img:nth-child(3) {
+    animation: slide 15s infinite 10s; /* Starts after 10 seconds */
+}
+
+footer h5 {
+    font-size: 1.2rem;  /* Larger font size */
+    line-height: 1.6;   /* Increased line height */
+    font-weight: 400;   /* Normal font weight */
+    text-align: justify; /* Justified text alignment */
+    color: 	#333;        /* Neutral text color */
+    padding: 5%;        /* Adjusted padding */
+    background-color: #A7C7E7;  /* Light background */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for 3D effect */
+}
+
